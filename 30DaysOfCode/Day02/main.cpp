@@ -1,10 +1,17 @@
 #include <bits/stdc++.h>
+#include <math.h>
 
 using namespace std;
 
 // Complete the solve function below.
 void solve(double meal_cost, int tip_percent, int tax_percent)
 {
+    double tax = meal_cost * (tax_percent / 100.0);
+    double tip = meal_cost * (tip_percent / 100.0);
+
+    double totalCost = meal_cost + tip + tax;
+
+    cout << round(totalCost);
 }
 
 int main()
