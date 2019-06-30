@@ -19,12 +19,17 @@ int main()
 
     vector<int> arr(n);
 
+    // Populate the vector/array
     for (int i = 0; i < n; i++)
     {
         int arr_item = stoi(arr_temp[i]);
 
         arr[i] = arr_item;
     }
+
+    // Print the array in reverse order
+    for(int i = arr.size() - 1; 0 <= i; i--)
+        cout << arr[i] << " ";
 
     return 0;
 }
