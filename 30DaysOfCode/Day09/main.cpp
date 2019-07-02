@@ -1,26 +1,27 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
-using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
 
-// Complete the factorial function below.
-int factorial(int n) {
-
-
+int factorial(int n)
+{
+    // Base case for the function
+    if(n == 1)
+        return n;
+    else
+        return n * factorial(n -1);    
 }
 
 int main()
 {
-    ofstream fout(getenv("OUTPUT_PATH"));
-
     int n;
     cin >> n;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.ignore();
 
     int result = factorial(n);
 
-    fout << result << "\n";
-
-    fout.close();
+    cout << result << endl;
 
     return 0;
 }
