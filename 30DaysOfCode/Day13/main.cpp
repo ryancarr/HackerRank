@@ -1,3 +1,4 @@
+#pragma region locked
 #include <cmath>
 #include <cstdio>
 #include <vector>
@@ -17,26 +18,31 @@ class Book{
         virtual void display()=0;
 
 };
+#pragma endregion
 
-// Write your MyBook class here
+class MyBook : public Book
+{
+    private:
+        int price;
 
-    //   Class Constructor
-    //   
-    //   Parameters:
-    //   title - The book's title.
-    //   author - The book's author.
-    //   price - The book's price.
-    //
-    // Write your constructor here
-    
-    
-    //   Function Name: display
-    //   Print the title, author, and price in the specified format.
-    //
-    // Write your method here
-    
-// End class
+    public:
+        MyBook(string t, string a, int p) : Book(t, a)
+        {
+            title = t;
+            author = a;
+            price = p;
+        }
 
+        void display() override
+        {
+            cout << "Title: " << title << endl;
+            cout << "Author: " << author << endl;
+            cout << "Price: " << price << endl;
+        }
+
+};
+
+#pragma region locked
 int main() {
     string title,author;
     int price;
@@ -47,3 +53,4 @@ int main() {
     novel.display();
     return 0;
 }
+#pragma endregion
