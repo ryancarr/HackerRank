@@ -17,21 +17,24 @@ class Difference {
 
 	void computeDifference()
     {
+        int max, min;        
         maximumDifference = numeric_limits<int>::min();
+        max = maximumDifference;
+        min = numeric_limits<int>::max();
 
-        // Nested loops works, but isn't efficient
-        // A better solution might be to find the min and max
-        // number in the whole vector and calculate their
-        // difference at the end
+        // Finding the min and max value across the whole
+        // vector is more efficient than traversing it multiple
+        // times checking each value against every other value
         for(int i = 0; i < elements.size(); i++)
         {
-            for(int j = 0; j < elements.size(); j++)
-            {
-                int difference = abs(elements[i] - elements[j]);
-                if(difference > maximumDifference)
-                    maximumDifference = difference;
-            }
+            int temp = elements[i];
+            if(temp < min)
+                min = temp;
+            if(max < temp)
+                max = temp;
         }
+
+        maximumDifference = abs(min - max);
     }
 
 }; // End of Difference class
