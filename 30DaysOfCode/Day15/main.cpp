@@ -14,10 +14,22 @@ class Node
 class Solution{
     public:
 
-      Node* insert(Node *head,int data)
-      {
-        // Complete this method
-      }
+    Node* insert(Node *head,int data)
+    {
+        Node *temp;
+
+        if(!head)
+            head = new Node(data);
+        else
+        {
+            temp = head;
+            while(temp->next)
+                temp = temp->next;
+            temp->next = new Node(data);
+        }
+
+        return head;
+    }
 
       void display(Node *head)
       {
