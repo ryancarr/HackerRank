@@ -1,31 +1,28 @@
-#include <map>
-#include <set>
-#include <list>
-#include <cmath>
-#include <ctime>
-#include <deque>
-#include <queue>
-#include <stack>
-#include <string>
-#include <bitset>
-#include <cstdio>
-#include <limits>
-#include <vector>
-#include <climits>
-#include <cstring>
-#include <cstdlib>
-#include <fstream>
-#include <numeric>
-#include <sstream>
 #include <iostream>
-#include <algorithm>
-#include <unordered_map>
+#include <string>
 
-using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::stoi;
+using std::string;
 
-
-int main(){
+int main()
+{
     string S;
     cin >> S;
+
+    int result = NULL;
+    
+    try
+    {
+        result = stoi(S);
+        cout << result << endl;
+    }
+    catch(std::exception e)
+    {
+        cout << "Bad String" << endl;
+    }
+    
     return 0;
 }
