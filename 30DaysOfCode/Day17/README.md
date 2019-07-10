@@ -41,8 +41,8 @@ n and p should be non-negative
 
 ## Explanation
 
-*T = 4*
-*T0*: *3* and *5* are positive, so power returns the result of *3^5*, which is *243*.
-*T1*: *2* and *4* are positive, so power returns the result of *2^4=*, which is *16*.
-*T2*: Both inputs (*-1* and *-2*) are negative, so power throws an exception and *n and p should be non-negative* is printed.
-*T3*: One of the inputs (*-1*) is negative, so power throws an exception and *n and p should be non-negative* is printed.
+* *T = 4*
+* *T0*: *3* and *5* are positive, so power returns the result of *3^5*, which is *243*.
+* *T1*: *2* and *4* are positive, so power returns the result of *2^4=*, which is *16*.
+* *T2*: Both inputs (*-1* and *-2*) are negative, so power throws an exception and *n and p should be non-negative* is printed.
+* *T3*: One of the inputs (*-1*) is negative, so power throws an exception and *n and p should be non-negative* is printed.
