@@ -1,11 +1,30 @@
 #include <iostream>
+#include <stack>
+#include <queue>
 
 using namespace std;
 
 class Solution
 {
-    //Write your code here
+    queue<char> q;
+    stack<char> stk;
 
+    public:
+        void pushCharacter(char c) { stk.push(c); }
+        void enqueueCharacter(char c) { q.push(c); }
+        char popCharacter()
+        { 
+            char result = stk.top();
+            stk.pop();
+            return result;
+        }
+
+        char dequeueCharacter()
+        {
+            char result = q.front();
+            q.pop();
+            return result;
+        }
 };
 
 int main() {
