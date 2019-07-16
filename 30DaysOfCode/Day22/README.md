@@ -40,10 +40,10 @@ The locked stub code in your editor will print the integer returned by your getH
 
 The input forms the following BST:
 
-[input.png]
+[BST](input.png)
 
 The longest root-to-leaf path is shown below:
 
-[height.png]
+[Longest Leg](height.png)
 
 There are *4* nodes in this path that are connected by edges, meaning our BST's *height = 3*. Thus, we print *3* as our answer.
