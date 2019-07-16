@@ -41,6 +41,7 @@ Print the *data* value of each node in the tree's level-order traversal as a sin
 ## Explanation
 
 The input forms the following binary search tree:
+
 ![](BST.png)
 
 We traverse each level of the tree from the root downward, and we process the nodes at each level from left to right. The resulting level-order traversal is *3 -> 2 -> 5 -> 1 -> 4 -> 7*, and we print these data values as a single line of space-separated integers.
