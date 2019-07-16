@@ -35,8 +35,33 @@ class Solution{
            }
         }
 
-		int getHeight(Node* root){
-          //Write your code here
+		int getHeight(Node* root)
+        {
+            int result;
+
+            if(!root)
+            {
+                // This challenge wants the depth - 1
+                // because we're only interested in the branches
+                // coming off of root. Not root itself
+                result = -1;
+            }
+            else
+            {
+                int left = getHeight(root->left);
+                int right = getHeight(root->right);
+
+                if(left > right)
+                {
+                    result = left + 1;
+                }
+                else
+                {
+                    result = right + 1;
+                }
+            }
+
+            return result;
         }
 
 }; //End of Solution
