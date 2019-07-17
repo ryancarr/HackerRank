@@ -20,7 +20,22 @@ class Solution{
 
           Node* removeDuplicates(Node *head)
           {
-            //Write your code here
+              Node *temp = head;
+
+              while(temp->next)
+              {
+                  if(temp->data == temp->next->data)
+                  {
+                      Node *duplicate = temp->next;
+                      temp->next = duplicate->next;
+                      
+                      delete duplicate;
+                  }
+                  else
+                    temp = temp->next;
+              }
+
+              return head;
           }
 
           Node* insert(Node *head,int data)
