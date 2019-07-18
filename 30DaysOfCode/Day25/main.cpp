@@ -5,21 +5,17 @@
 #include <algorithm>
 using namespace std;
 
-// Brute force prime number finder
-// VERY inefficient
-// I was hoping it might work for HackerRank
 bool isPrime(int number)
 {
+    // Only 2 or odd numbers larger than 2 are prime
     if(number < 2 || (number % 2 == 0 && number != 2))
         return false;
-    
-    for(int i = 3; i < number / 2 + 1; i++)
-    {
-        if(number % i == 0)
-        {
-            return false;
-        }
-    }
+
+    // We only need to check numbers less than or equal
+    // to the square root of our target number
+    for (int i = 2; i <= sqrt(number); i++) 
+        if (number % i == 0) 
+            return false; 
 
     return true;
 }
