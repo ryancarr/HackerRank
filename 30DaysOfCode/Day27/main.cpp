@@ -20,36 +20,44 @@ int minimum_index(vector<int> seq) {
     return min_idx;
 }
 
-class TestDataEmptyArray {
-public:
-    static vector<int> get_array() {
-        // complete this function
-    }
-
+class TestDataEmptyArray
+{
+    public:
+        static vector<int> get_array()
+        {
+            vector<int> result;
+            return result;
+        }
 };
 
-class TestDataUniqueValues {
-public:
-    static vector<int> get_array() {
-        // complete this function
-    }
+class TestDataUniqueValues
+{
+    public:
+        static vector<int> get_array()
+        {
+            vector<int> result {0, 2};
+            return result;
+        }
 
-    static int get_expected_result() {
-        // complete this function
-    }
-
+        static int get_expected_result()
+        {
+            return 0;
+        }
 };
 
-class TestDataExactlyTwoDifferentMinimums {
-public:
-    static vector<int> get_array() {
-        // complete this function
-    }
+class TestDataExactlyTwoDifferentMinimums
+{
+    public:
+        static vector<int> get_array()
+        {
+            vector<int> result {1, 0, 0, 2, 3};
+            return result;
+        }
 
-    static int get_expected_result() {
-        // complete this function
-    }
-
+        static int get_expected_result()
+        {
+            return 1;
+        }
 };
 
 
