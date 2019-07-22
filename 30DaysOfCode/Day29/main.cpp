@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
+void maximum_bitwise_and(int, int);
 vector<string> split_string(string);
-
-
 
 int main()
 {
@@ -19,11 +17,31 @@ int main()
         vector<string> nk = split_string(nk_temp);
 
         int n = stoi(nk[0]);
-
         int k = stoi(nk[1]);
+
+        maximum_bitwise_and(n, k);
     }
 
     return 0;
+}
+
+void maximum_bitwise_and(int n, int k)
+{
+    int result = std::numeric_limits<int>::min();
+
+    for(int i = 1; i < n; i++)
+    {
+        for(int j = 2; j <= n; j++)
+        {
+            int bit = i&j;
+
+            if(bit >= k) continue;
+            else if(result < bit)
+                result = bit;            
+        }
+    }
+
+    cout << result << endl;
 }
 
 vector<string> split_string(string input_string) {
