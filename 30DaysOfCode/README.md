@@ -31,4 +31,4 @@ This will be a chronicle of my attempt to solve each of the 30 days of code chal
 1. Day 26: Nested Logic           - **Solved**
 1. Day 27: Unit Testing           - **Solved**
 1. Day 28: RegEx and Patterns     - **Solved**
-1. Day 29: Bitwise AND            - **Not Solved**
+1. Day 29: Bitwise AND            - **Solved**
