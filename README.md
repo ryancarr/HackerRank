@@ -7,3 +7,9 @@ This is the 30 Days of Code challenge. Every day at 9am a new challenge will unl
 
 ## C++
 This is the series of challenges aimed at C++ developers. As expected the first few are rather simple in nature. But the difficulty quickly ramps up. Some of these challenges may take more than one day to complete.
+
+## Python
+This is the series of challenges for Python developers for basic to expert problem solving.
+
+## Problem Solving
+This is the series of challenges for basic to expert problem solving.
